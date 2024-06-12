@@ -1,26 +1,28 @@
 <template>
-  <div class="overflow-x-hidden relative">
+  <div
+    class="overflow-x-hidden relative bg-gradient-to-r from-amber-100 to-amber-50/70"
+  >
+    <!-- button to play/pause music -->
     <img
       src="/public/2.png"
       alt=""
-      class="fixed bottom-0 -left-[100px] w-[800px]"
+      class="fixed bottom-0 -left-[100px] w-[800px] -z-10"
     />
     <!--  -->
-    <section
-      id="tanggal"
-      class="relative bg-gradient-to-r from-amber-100 to-amber-50/70 font-robotomono"
-    >
+    <section id="tanggal" class="z-20 relative font-robotomono">
       <img
         src="/public/1.png"
-        class="absolute bottom-0 -left-[150px] w-[500px] -rotate-[70deg]"
+        class="absolute bottom-0 -left-[150px] w-[500px] -rotate-[70deg] animate-rotate-1"
         alt=""
       />
       <img
         src="/public/1.png"
-        class="absolute -top-[100px] -right-[150px] w-[500px] rotate-[90deg]"
+        class="absolute -top-[100px] -right-[150px] w-[500px] rotate-[90deg] animate-rotate-2"
         alt=""
       />
-      <div class="flex flex-col justify-center items-center min-h-screen">
+      <div
+        class="flex flex-col justify-center items-center min-h-screen z-50 relative"
+      >
         <p class="mb-4">The Wedding of</p>
         <h1 class="text-center font-alexbrush text-6xl">
           Tuadi
@@ -46,9 +48,13 @@
     <!--  -->
     <section
       id="resepsi"
-      class="px-2 relative bg-gradient-to-r from-amber-100 to-amber-50/70 font-robotomono min-h-screen flex flex-col justify-center items-center"
+      class="px-2 relative font-robotomono min-h-screen flex flex-col justify-center items-center"
     >
-      <img src="/public/3.png" alt="" class="absolute w-full max-w-[800px]" />
+      <img
+        src="/public/3.png"
+        alt=""
+        class="absolute w-full max-w-[800px] animate-rotate-1"
+      />
       <div
         data-aos="fade-up"
         data-aos-duration="1500"
@@ -79,28 +85,28 @@
         >
           <!-- item -->
           <div
-            class="flex flex-col justify-center items-center bg-amber-800 px-5 py-2 rounded-xl text-white"
+            class="flex flex-col justify-center items-center bg-amber-800 w-20 py-2 rounded-xl text-white"
           >
             <span class="days">0</span>
             <span>Hari</span>
           </div>
           <!-- item -->
           <div
-            class="flex flex-col justify-center items-center bg-amber-800 px-5 py-2 rounded-xl text-white"
+            class="flex flex-col justify-center items-center bg-amber-800 w-20 py-2 rounded-xl text-white"
           >
             <span class="hours">0</span>
             <span>Jam</span>
           </div>
           <!-- item -->
           <div
-            class="flex flex-col justify-center items-center bg-amber-800 px-5 py-2 rounded-xl text-white"
+            class="flex flex-col justify-center items-center bg-amber-800 w-20 py-2 rounded-xl text-white"
           >
             <span class="minutes">0</span>
             <span>Menit</span>
           </div>
           <!-- item -->
           <div
-            class="flex flex-col justify-center items-center bg-amber-800 px-5 py-2 rounded-xl text-white"
+            class="flex flex-col justify-center items-center bg-amber-800 w-20 py-2 rounded-xl text-white"
           >
             <span class="seconds">0</span>
             <span>Detik</span>
@@ -111,20 +117,20 @@
     <!--  -->
     <section
       id="lokasi"
-      class="relative bg-gradient-to-r h-screen from-amber-100 to-amber-50/70 font-robotomono py-5 overflow-hidden flex justify-center items-center"
+      class="relative h-screen font-robotomono py-5 overflow-hidden flex justify-center items-center"
     >
       <img
         src="/public/1.png"
-        class="absolute bottom-0 -left-[150px] w-[500px] -rotate-[70deg]"
+        class="absolute bottom-0 -left-[150px] w-[500px] -rotate-[70deg] animate-rotate-1"
         alt=""
       />
       <img
         src="/public/1.png"
-        class="absolute -right-[150px] top-0 w-[500px] rotate-[90deg]"
+        class="absolute -right-[150px] top-0 w-[500px] rotate-[90deg] animate-rotate-1"
         alt=""
       />
       <div
-        class="container mx-auto bg-white bg-opacity-80 max-w-[500px] w-full p-5 rounded-lg z-10 relative border-2 border-amber-200"
+        class="container mx-auto bg-white bg-opacity-80 max-w-[500px] w-full p-5 rounded-lg z-10 relative border-2 border-amber-200 mx-2"
         data-aos="fade-up"
         data-aos-duration="1500"
       >
@@ -241,10 +247,48 @@
   </div>
 </template>
 
+
+<style>
+.animate-rotate-1 {
+  animation: rotate 10s infinite ease-in-out;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-70deg);
+  }
+  50% {
+    transform: rotate(-60deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(-70deg);
+  }
+}
+.animate-rotate-2 {
+  animation: rotate2 10s infinite ease-in-out;
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(100deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+.animate-scale-1 {
+  animation: scale1 10s infinite ease-in-out;
+}
+</style>
+
+
 <script setup>
 import { ref, onMounted } from "vue";
 
 const visitor = ref("");
+const musicPlaying = ref(false);
+const musicElement = ref(null);
 
 const setVisior = () => {
   let url = new URLSearchParams(window.location.search);
