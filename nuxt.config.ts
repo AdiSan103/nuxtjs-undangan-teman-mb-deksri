@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   modules: ['nuxt-aos', [
     "@nuxtjs/google-fonts",{
       families: {
-        Lato: [100,200, 300,400,500,600,700,800,900],
+        "Alex Brush": [100,200, 300,400,500,600,700,800,900],
         "Roboto Mono":[100,200, 300,400,500,600,700,800,900]
       }
     }
