@@ -30,7 +30,7 @@
           <p class="font-alexbrush text-6xl mt-3">&</p>
           Mega Wahyu Mustika Amd . Kep
         </h1>
-        <p class="text-xs mt-1">1 - 08 - 2024</p>
+        <p class="text-xs mt-1">14 - 08 - 2024</p>
         <p class="text-xs mt-1">Kepada YTH.</p>
         <p class="text-xs mt-1 mb-2">Grup/Bapak/Ibu/Saudara/i</p>
         <p class="font-bold text-2xl mb-4 text-amber-800">
@@ -136,7 +136,7 @@
         data-aos-duration="1500"
       >
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15776.216467564687!2d115.24041254999999!3d-8.686403949999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd24054f68297cb%3A0x438fe83a901c028b!2sRenon%2C%20Denpasar%20Selatan%2C%20Kota%20Denpasar%2C%20Bali!5e0!3m2!1sid!2sid!4v1718167282243!5m2!1sid!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.6103746627386!2d111.2062412!3d-7.5081917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79f3e2087703bd%3A0xd8a2c2a6e0e4a28f!2sGedung%20Graha%20Semar%20Ngrambe!5e0!3m2!1sid!2sid!4v1719225922953!5m2!1sid!2sid"
           width="100%"
           height="300"
           style="border: 0"
@@ -146,7 +146,7 @@
         ></iframe>
         <div class="text-center">
           <h2 class="font-alexbrush text-2xl mt-7 -mb-2">Satu Momen</h2>
-          <p class="mb-4">Jl Hayam Wuruk No 127, Banjar Gubug, Bangli</p>
+          <p class="mb-4">Gedung Graha Semar Ngrambe</p>
         </div>
       </div>
     </section>
@@ -342,6 +342,6 @@ onMounted(() => {
       }
     }, 100);
   };
-  timer("2024,08,1");
+  timer("2024,08,14");
 });
 </script>
