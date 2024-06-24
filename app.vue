@@ -24,16 +24,15 @@
         class="flex flex-col justify-center items-center min-h-screen z-50 relative"
       >
         <p class="mb-4">The Wedding of</p>
-        <h1 class="text-center font-alexbrush text-6xl">
-          Tuadi
+        <h1 class="text-center text-lg">
+          Muhammad Najib Baharsyah , S . Pd
           <br />
-          &
-          <br />
-          Ayu ast
+          <p class="font-alexbrush text-6xl mt-3">&</p>
+          Mega Wahyu Mustika Amd . Kep
         </h1>
-        <p>22 - 12 - 2024</p>
-        <p>Kepada YTH.</p>
-        <p>Grup/Bapak/Ibu/Saudara/i</p>
+        <p class="text-xs mt-1">1 - 08 - 2024</p>
+        <p class="text-xs mt-1">Kepada YTH.</p>
+        <p class="text-xs mt-1 mb-2">Grup/Bapak/Ibu/Saudara/i</p>
         <p class="font-bold text-2xl mb-4 text-amber-800">
           {{ visitor }}
         </p>
@@ -61,22 +60,24 @@
         class="flex flex-col justify-center items-center py-10 bg-white bg-opacity-80 w-full max-w-[500px] mx-auto rounded-2xl z-10 border-2 border-amber-800"
       >
         <div class="text-center" data-aos="fade-up" data-aos-duration="1500">
-          <p class="font-alexbrush font-bold text-4xl">Akad Nikah</p>
-          <p>Minggu, 21 Juni 2024</p>
-          <p>Waktu 18.00 Wita</p>
-          <p>Gedung</p>
-          <p>Jl Hayam Wuruk No 127, Banjar Gubug, Bangli</p>
+          <p class="font-alexbrush font-bold text-2xl">
+            Muhammad Najib Baharsyah , S . Pd
+          </p>
+          <p>Putra dari Bapak Drs . Joko Minarto , M . Pd</p>
+          <p>&</p>
+          <p>Drs . Ibu Siti Karimah</p>
         </div>
         <div
           class="text-center mt-10"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          <p class="font-alexbrush font-bold text-4xl">Resepsi</p>
-          <p>Minggu, 21 Juni 2024</p>
-          <p>Waktu 18.00 Wita</p>
-          <p>Gedung</p>
-          <p>Jl Hayam Wuruk No 127, Banjar Gubug, Bangli</p>
+          <p class="font-alexbrush font-bold text-2xl">
+            Mega Wahyu Mustika Amd . Kep
+          </p>
+          <p>Putri dari Bapak Sukidi (Alm)</p>
+          <p>&</p>
+          <p>Ibu Suparmi</p>
         </div>
         <div
           class="flex gap-2 mt-5"
@@ -341,6 +342,6 @@ onMounted(() => {
       }
     }, 100);
   };
-  timer("2024,06,21");
+  timer("2024,08,1");
 });
 </script>
